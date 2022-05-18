@@ -57,12 +57,11 @@ namespace SocialniDavky
 
                     PrintAction(human, $" {(human.Gender > 50 ? "dostal" : "dostala")} castku ", ration);
                     tolalRation -= ration;
-                    ration = 0;
                 }
                 else
                 {
                     var human = _humans.Dequeue();
-                    human.Ration = ration;
+                    human.Ration = tolalRation;
                     PrintAction(human, $" {(human.Gender > 50 ? "dostal" : "dostala")} zbylou castku ", ration);
                     break;
                 }

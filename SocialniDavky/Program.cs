@@ -9,7 +9,7 @@ namespace SocialniDavky
         {
             var manager = new RationManager();
             var generator = new RandomNameGenerator();
-            for (int i = 0; i <155; i++)
+            for (int i = 0; i <5; i++)
             {
                 manager.Add(generator.GenerateHuman());
             }
