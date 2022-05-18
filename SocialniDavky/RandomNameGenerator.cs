@@ -74,7 +74,7 @@ namespace SocialniDavky
                 surname = womanSurnames[r.Next(0, womanSurnames.Length - 1)];
             }
 
-            return new Human(name, surname);
+            return new Human(name, surname,g);
 
         }
     }

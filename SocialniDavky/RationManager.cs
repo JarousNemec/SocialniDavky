@@ -46,7 +46,7 @@ namespace SocialniDavky
                 {
                     var human = _humans.Dequeue();
                     human.Ration = tolalRation;
-                    PrintAction(human, " dostal zbylou castku ", ration);
+                    PrintAction(human, $" {(human.Gender > 50 ? "dostal" : "dostala")} zbylou castku ", ration);
                     break;
                 }
 
@@ -55,7 +55,7 @@ namespace SocialniDavky
                     var human = _humans.Dequeue();
                     human.Ration = ration;
 
-                    PrintAction(human, " dostal castku ", ration);
+                    PrintAction(human, $" {(human.Gender > 50 ? "dostal" : "dostala")} castku ", ration);
                     tolalRation -= ration;
                     ration = 0;
                 }
@@ -63,7 +63,7 @@ namespace SocialniDavky
                 {
                     var human = _humans.Dequeue();
                     human.Ration = ration;
-                    PrintAction(human, " dostal zbylou castku ", ration);
+                    PrintAction(human, $" {(human.Gender > 50 ? "dostal" : "dostala")} zbylou castku ", ration);
                     break;
                 }
             }
@@ -76,6 +76,7 @@ namespace SocialniDavky
                 {
                     Console.WriteLine(human);
                 }
+
                 Console.ResetColor();
             }
         }
